@@ -1,60 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Result Page - Diabetes Prediction</title>
-  <meta name="theme-color" content="white">
-  <!-- Import Google Font-->
-  <link rel="preconnect" href="../fonts.googleapis.com/index.html">
-  <link rel="preconnect" href="../fonts.gstatic.com/index.html" crossorigin>
-  <link href="../fonts.googleapis.com/css23585.css?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" id="google-font">
-
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
-
-  <meta name="author" content="Diabetes Prediction">
-	<meta name="description" content="Using machine learning algorithms to predict diabetes. Model used include Logistic Regression, XGBoost, KNN and SVM." />
-
-	<meta property="og:title" content="Diabetes Prediction using Machine Learning" />
-	<meta property="og:description" content="Using machine learning algorithms to predict diabetes. Model used include Logistic Regression, XGBoost, KNN and SVM." />
-  <meta property="og:image" content="{{ url_for('static', filename='img/diabetes_patient.jpg') }}" />
-  <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/diabetes_patient.jpg') }}">
-  
+    <meta charset="UTF-8">
+    <meta name="author" content="Softnio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.png">
+    <title>Diabetes Prediction Form</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
-<!-- Body-->
-<body style="background-color: rgb(15, 86, 86);">
-
-  <!-- Page wrapper-->
-  <main class="page-wrapper">
+<body class="nk-body" data-navbar-collapse="xl">
     
-    <!-- Page content-->
-    <div class="container py-5 mt-4 mt-lg-5 mb-lg-4 my-xl-5 ">
-      <div class="row pt-sm-2 pt-lg-0 justify-content-center" >
-        
-        <!-- Page content-->
-        <div class="col-lg-9 pt-4 pb-2 pb-sm-4 ">
-          <!-- Basic info-->
-          <section class="card border-0 py-1 p-md-2 p-xl-3 p-xxl-4 mb-4">
+    <div class="nk-app-root home-bs-consulting">
+        <main class="nk-pages">
             
-
-              <div class="card-body">
-              
-                
-                <div class="text-center">
-                  <h1 class="">Diabetes Prediction Result</h1>
-                  <p class="text h2 pt-4">The predicted outcome is: <br><br><span class="h1 fw-bold text-decoration-underline">{{ prediction }}</span></p>
-                  <!-- <p class="text">The predicted outcome is: <span class="badge bg-faded-danger text-danger fs-xs p-2">{{ prediction }}</span></p> -->
-                  
+            <section class="nk-section">
+                <div class="container">
+                    <div class="nk-cta-wrap nk-cta-card bg-primary-gradient rounded-3 is-theme position-relative overflow-hidden" data-aos="fade-up" data-aos-delay="100" style="background-color: rgb(15, 86, 86) !important;">
+                        <div class="row g-0 align-items-center overflow-hidden">
+                            <div class="col-lg-12 order-lg-0 order-2">
+                                <div class="nk-block-head-content  mb-0">
+                                    <h1 class="">Diabetes Prediction Result</h1>
+                                    <p class="text h2 pt-4">
+                                        Your predicted outcome is: <br><br>
+                                        <span class="h1 fw-bold text-decoration-underline">{{ prediction }}</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                
+            </section>
+            
+        </main>
+        <footer class="nk-footer is-theme">
+            <div class="nk-footer-top">
+                <div class="container">
+                    <div class="nk-footer-content pt-7">
+                        <div class="row text-center text-xl-start justify-content-center justify-content-md-between">
+                            <div class="col-md-6 col-lg-3">
+                                <div class="nk-footer-brand">
+                                    <div class="nk-footer-brand-info">
+                                        <div class="nk-footer-logo mb-5 mb-md-0 text-white">
+                                            Diabetes Prediction
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="nk-footer-brand">
+                                    <div class="nk-footer-brand-info">
+                                        <div class="nk-footer-logo mb-5 mb-md-0 text-white">
+                                            &copy; <span id="currentYear"> </span>
+                                            All Rights Reserved.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              
-
-          </section>
-        </div>
-      </div>
+            </div>
+        </footer>
     </div>
-  </main>
-  
+    <script type="text/javascript" src="{{ url_for('static', filename='js/bundle.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/scripts.js') }}"></script>
 </body>
 </html>

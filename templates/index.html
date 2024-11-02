@@ -1,129 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-
-    <meta property="og:title" content="Diabetes Prediction Webite"/>
-    <meta property="og:url" content="https://diabetes-pred-98acd371720f.herokuapp.com"/>
-    <meta name="og:description" content="Predict diabetes easily" />
-
-    <title>Diabetes Prediction</title>
-    <meta name="theme-color" content="white">
-    <!-- Import Google Font-->
-    <link rel="preconnect" href="static/css/fonts.googleapis.com/index.html">
-    <link href="static/css/fonts.googleapis.com/css23585.css?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" id="google-font">
-    
+    <meta charset="UTF-8">
+    <meta name="author" content="Softnio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.png">
+    <title>NioLand - Homepage Business Consulting</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="nk-body" data-navbar-collapse="xl">
 
-    <meta name="author" content="Diabetes Prediction">
-    <meta name="description" content="Using machine learning algorithms to predict diabetes. Model used include Logistic Regression, XGBoost, KNN and SVM." />
-  
-    <meta property="og:title" content="Diabetes Prediction using Machine Learning" />
-    <meta property="og:description" content="Using machine learning algorithms to predict diabetes. Model used include Logistic Regression, XGBoost, KNN and SVM." />
-    <meta property="og:image" content="{{ url_for('static', filename='img/diabetes_patient.jpg') }}" />
-    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/diabetes_patient.jpg') }}">
-
-  </head>
-  <!-- Body-->
-  <body>
-
-    <!-- Page wrapper-->
-    <main class="page-wrapper">
-
-      <!-- Page content-->
-
-      <section class="jarallax min-vh-100 py-lg-3 py-xl-4 py-xxl-5" data-jarallax data-speed="0.65">
-        <div class="jarallax-img" style="background-image: url(static/img/diabetes_patient.jpg?w=1155&h=2268);"></div>
-        <div class="container-fluid position-relative zindex-2 py-5 my-md-3 my-lg-5">
-          <div class="row pb-3 pt-4 pt-sm-5">
-            <div class="col-md-9 col-lg-7 col-xl-6 col-xxl-6 offset-lg-3 pt-" >
-              <div class="card dark-mode border-0 rounded-1 py-2 py-sm-3 py-md-4">
-                <div class="card-body">
-                  <div class="mx-auto pt-2" style="max-width: 700px;">
-                    <h1 class="display-5 mb-4 text-black">Diabetes Prediction</h1>
-                    <p class="fs-5 pb-4 pb-lg-5 mb-2 text-black">
-                      The Model used in development of this project has an accuracy of 95.97% and a precision of 77.28%.
-                      <br>
-                      <br>
-                      This model provides predictions for educational purposes only. Please, consult a healthcare professional for medical concerns and decisions.
-                    </p>
-                    <div class="d-flex flex-column flex-sm-row align-items-center pb-lg-2">
-                      <a class="btn btn-lg btn-primary w-100 w-sm-auto me-sm-3 mb-3 mb-sm-0" href="{{ url_for('predict_diabetes') }}"  style="background-color: rgb(15, 86, 86) !important;">
-                        Get the Test
-                      </a>
+    <div class="nk-app-root home-bs-consulting">
+        <main class="nk-pages">
+            <section class="nk-banner is-theme nk-banner-bs-consulting bg-gray-200">
+                <div class="nk-banner-wrap">
+                    <div class="container">
+                        <div class="nk-banner-content">
+                            <div class="row align-items-center">
+                                <div class="col-lg-10 col-xxl-9">
+                                    <div>
+                                        <div>
+                                            <h1 class="display-6 text-capitalize mb-md-4" data-aos="fade-up" data-aos-delay="0">
+                                                Diabetes Prediction
+                                            </h1>
+                                            <p class="nk-section-text opacity-75" data-aos="fade-up" data-aos-delay="50">
+                                                The Model used in development of this project has an accuracy of 95.97% and a precision of 77.28%.
+                                            </p>
+                                            <br>
+                                            <p class="nk-section-text opacity-75" data-aos="fade-up" data-aos-delay="50">
+                                                This model provides predictions for educational purposes only. Please, consult a healthcare professional for medical concerns and decisions.
+                                            </p>
+                                        </div>
+                                        <ul class="nk-btn-group pt-5 pt-lg-7" data-aos="fade-up" data-aos-delay="100">
+                                            <li>
+                                                <a href="{{ url_for('predict_diabetes') }}" class="btn btn-primary">Get the test</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <ul class="list-unstyled d-sm-flex mb-0 pt-4 pt-sm-5 mt-lg-2 mt-xl-4" style="display: none !important;">
-                      <li class="d-flex mb-2 mb-sm-0 pe-sm-1 me-sm-3"><i class="ai-check-alt text-white fs-4 mt-n1 me-2"></i>Full spectrum of services</li>
-                      <li class="d-flex"><i class="ai-check-alt text-white fs-4 mt-n1 me-2"></i>Flexible work terms</li>
-                    </ul>
-                  </div>
                 </div>
-              </div>
+            </section>
+            <section class="nk-section nk-section-complishment py-7 py-xl-0">
+                <div class="container">
+                    <div class="nk-section-content">
+                        <div class="row gy-5 gy-md-7 gy-xl-0">
+                            <div class="col-xl-3 col-sm-6" data-aos="fade-up" data-aos-delay="0">
+                                <div class="text-center">
+                                    <p class="h1 mb-4 d-flex align-items-center justify-content-center">
+                                        95.97 <span class="text-primary">%</span>
+                                    </p>
+                                    <div>
+                                        <h5>Accuracy</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-sm-6" data-aos="fade-up" data-aos-delay="50">
+                                <div class="text-center">
+                                    <p class="h1 mb-4 d-flex align-items-center justify-content-center">
+                                        75.82<span class="text-primary">%</span>
+                                    </p>
+                                    <div>
+                                        <h5>F1 Score</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+                                <div class="text-center">
+                                    <p class="h1 mb-4 d-flex align-items-center justify-content-center"> 74.41 <span class="text-primary">%</span>
+                                    </p>
+                                    <div>
+                                        <h5>Recall</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-sm-6" data-aos="fade-up" data-aos-delay="150">
+                                <div class="text-center">
+                                    <p class="h1 mb-4 d-flex align-items-center justify-content-center"> 77.28 <span class="text-primary">%</span>
+                                    </p>
+                                    <div>
+                                        <h5>Precision</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="nk-section">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8 col-xxl-6">
+                            <div class="nk-section-head text-center">
+                                <span class="nk-section-subtitle">Our Solutions</span>
+                                <h2>The Solutions We Offer</h2>
+                                <p class="nk-section-text"> Our comprehensive range of solutions encompasses various domains, providing effective resolutions. </p>
+                                <ul class="nk-btn-group justify-content-center pt-5">
+                                    <li>
+                                        <a href="#" class="btn btn-primary">Browse All</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row gy-5 gy-xl-0">
+                        
+                        <div class="col-xl-4 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="50">
+                            <div class="card shadow-xl">
+                                <div class="card-body">
+                                    <div class="media media-lg media-middle media-circle text-bg-primary-soft mb-5">
+                                        <em class="icon ni ni-puzzle-fill"></em>
+                                    </div>
+                                    <div class="mb-5">
+                                        <h4>Maintain a Healthy Weight</h4>
+                                        <p class="fs-16 text-gray-800 ">
+                                            Keeping your weight within a healthy range can reduce your risk of diabetes. Aim for a balanced diet and regular exercise to achieve and maintain a healthy weight.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                            <div class="card shadow-xl">
+                                <div class="card-body">
+                                    <div class="media media-lg media-middle media-circle text-bg-primary-soft mb-5">
+                                        <em class="icon ni ni-puzzle-fill"></em>
+                                    </div>
+                                    <div class="mb-5">
+                                        <h4>Monitor Your Blood Sugar</h4>
+                                        <p class="fs-16 text-gray-800 ">
+                                            If you have risk factors for diabetes, regular monitoring of your blood sugar levels can help you stay on top of your health and catch any early signs of diabetes.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
+                            <div class="card shadow-xl">
+                                <div class="card-body">
+                                    <div class="media media-lg media-middle media-circle text-bg-primary-soft mb-5">
+                                        <em class="icon ni ni-puzzle-fill"></em>
+                                    </div>
+                                    <div class="mb-5">
+                                        <h4>Get Regular Check-ups</h4>
+                                        <p class="fs-16 text-gray-800 ">
+                                            Regular health check-ups can help detect any early signs of diabetes. Your healthcare provider can provide personalized advice on how to prevent diabetes based on your health status and risk factors.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="nk-section nk-section-cta pb-7 pb-lg-120">
+                <div class="container">
+                    <div class="nk-section-content bg-primary p-5 p-md-7 py-lg-80 text-left overflow-hidden rounded-4 bg-3">
+                        <div class="row justify-content-center">
+                            <div class="col-xl-11">
+                                <div>
+                                    <div class="nk-section-head pb-0">
+                                        <h2 class="nk-section-title text-white" data-aos="fade-up" data-aos-delay="0">Need help?</h2>
+                                        <p class="nk-section-text text-white " data-aos="fade-up" data-aos-delay="50">
+                                            The Diabetes Association of Nigeria (DAN) supports diabetes awareness, education, and early diagnosis across Nigeria.
+                                            <br>
+                                            <br>
+                                            It hosts workshops, screenings, and advocacy campaigns, collaborating with healthcare providers to improve diabetes care and reduce complications.
+                                        </p>
+                                        <div class="pt-5 pt-lg-40" data-aos="fade-up" data-aos-delay="100">
+                                            <a href="https://idf.org/our-network/regions-and-members/africa/members/nigeria/diabetes-association-of-nigeria/" class="btn btn-white text-primary fw-semibold">CONTACT US</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="nk-footer is-theme">
+            <div class="nk-footer-top">
+                <div class="container">
+                    <div class="nk-footer-content pt-7">
+                        <div class="row text-center text-xl-start justify-content-center justify-content-md-between">
+                            <div class="col-md-6 col-lg-3">
+                                <div class="nk-footer-brand">
+                                    <div class="nk-footer-brand-info">
+                                        <div class="nk-footer-logo mb-5 mb-md-0 text-white">
+                                            Diabetes Prediction
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="nk-footer-brand">
+                                    <div class="nk-footer-brand-info">
+                                        <div class="nk-footer-logo mb-5 mb-md-0 text-white">
+                                            &copy; <span id="currentYear"> </span>
+                                    All Rights Reserved.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </section>
+        </footer>
+    </div>
+    <!-- <script src="assets/js/bundle2888.js?v1.0.0"></script>
+    <script src="assets/js/scripts2888.js?v1.0.0"></script> -->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/bundle.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/scripts.js') }}"></script>
 
 
-
-
-
-       <!-- Services-->
-       <section class="container py-5 my-md-2 my-lg-3 my-xl-4 my-xxl-5">
-        <div class="row align-items-center py-1 py-sm-3 py-md-4 my-lg-2">
-          <h1 class="h1 text-center pb-5">
-            How to Prevent Diabetes
-          </h1>
-         
-          <div class="col-lg-12 col-xl-12 col-xxl-12 col-12">
-            <div class="row ">
-              <div class="col-md-6 col-lg-4">
-                <div class="card border-0 bg-faded-primary">
-                  <div class="card-body"><i class="ai-search-settings fs-1 text-primary d-block mb-3"></i>
-                    <h3 class="h4">Maintain a Healthy Weight</h3>
-                    <p class="fs-lg text-black" style="font-weight: 500;">
-                      Keeping your weight within a healthy range can reduce your risk of diabetes. Aim for a balanced diet and regular exercise to achieve and maintain a healthy weight.
-                    </p>
-                  </div>
-                </div>
-               
-              </div>
-              <div class="col-md-6 col-lg-4 pt-lg-3">
-                
-                <div class="card border-0 bg-faded-danger mt-4">
-                  <div class="card-body"><i class="ai-telegram fs-2 text-danger d-block mb-3"></i>
-                    <h3 class="h4">
-                      Monitor Your Blood Sugar Levels
-                    </h3>
-                    <p class="fs-lg text-black" style="font-weight: 500;">
-                      If you have risk factors for diabetes, regular monitoring of your blood sugar levels can help you stay on top of your health and catch any early signs of diabetes.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="card border-0 bg-faded-info mt-4">
-                  <div class="card-body"><i class="ai-bulb-alt fs-1 text-info d-block mb-3"></i>
-                    <h3 class="h4">
-                      Get Regular Check-ups
-                    </h3>
-                    <p class="fs-lg text-black" style="font-weight: 500;">
-                      Regular health check-ups can help detect any early signs of diabetes. Your healthcare provider can provide personalized advice on how to prevent diabetes based on your health status and risk factors.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              
-            </div>
-            <!-- Show button on screens < 992px-->
-            <div class="text-center pt-3 mt-3 mt-sm-4 h6 "><a class="btn btn-primary text-white" href="{{ url_for('predict_diabetes') }}">Get the Test</a></div>
-          </div>
-        </div>
-      </section>
-
-    </main>
-
- 
-
-  </body>
+</body>
 </html>
