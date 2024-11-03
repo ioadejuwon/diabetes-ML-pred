@@ -36261,7 +36261,7 @@ button.swiper-pagination-bullet {
     pointer-events: none;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url("../images/shape/b.png")
+    /* background-image: url("../images/shape/b.png") */
 }
 
 @media(min-width: 768px) {
@@ -43171,7 +43171,7 @@ h6,.h6 {
     position: absolute;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url("../images/blur/b.png")
+    /* background-image: url("../images/blur/b.png") */
 }
 
 .blur-1.right.top::after {
