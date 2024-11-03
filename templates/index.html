@@ -7,19 +7,15 @@
     <link rel="shortcut icon" href="images/favicon.png">
     <title>Diabetes Prediction Using Machine Learning</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
-
+    
     <meta name="author" content="Diabetes Prediction">
-	<meta name="description" content="Using machine learning algorithms to predict diabetes. Model used include Logistic Regression, XGBoost, KNN and SVM." />
-
-	<meta property="og:title" content="Diabetes Prediction using Machine Learning" />
-	<meta property="og:description" content="Using machine learning algorithms to predict diabetes. Model used include Logistic Regression, XGBoost, KNN and SVM." />
-  <meta property="og:image" content="{{ url_for('static', filename='img/diabetes_patient.jpg') }}" />
-  <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/diabetes_patient.jpg') }}">
-
-  
+    <meta name="description" content="Using machine learning algorithms to predict diabetes. Model used include Logistic Regression, XGBoost, KNN and SVM." />
+    <meta property="og:title" content="Diabetes Prediction using Machine Learning" />
+    <meta property="og:description" content="Using machine learning algorithms to predict diabetes. Model used include Logistic Regression, XGBoost, KNN and SVM." />
+    <meta property="og:image" content="{{ url_for('static', filename='img/diabetes_patient.jpg') }}" />
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/diabetes_patient.jpg') }}">
 </head>
 <body class="nk-body" data-navbar-collapse="xl">
-
     <div class="nk-app-root home-bs-consulting">
         <main class="nk-pages">
             <section class="nk-banner is-theme nk-banner-bs-consulting bg-gray-200">
@@ -43,7 +39,7 @@
                                         </div>
                                         <ul class="nk-btn-group pt-5 pt-lg-7" data-aos="fade-up" data-aos-delay="100">
                                             <li>
-                                                <a href="{{ url_for('predict_diabetes') }}" class="btn btn-primary">Get the test</a>
+                                                <a href="{{ url_for('predict_diabetes') }}" class="btn btn-white">TAKE THE TEST</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -99,21 +95,16 @@
                     </div>
                 </div>
             </section>
-
-
+            
+            
             <section class="nk-section">
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-8 col-xxl-6">
                             <div class="nk-section-head text-center">
-                                <span class="nk-section-subtitle">Our Solutions</span>
-                                <h2>The Solutions We Offer</h2>
-                                <p class="nk-section-text"> Our comprehensive range of solutions encompasses various domains, providing effective resolutions. </p>
-                                <ul class="nk-btn-group justify-content-center pt-5">
-                                    <li>
-                                        <a href="#" class="btn btn-primary">Browse All</a>
-                                    </li>
-                                </ul>
+                                <span class="nk-section-subtitle">PREVENTIVE MEASURES</span>
+                                <h2>Pathways to Healthier Living</h2>
+                                <p class="nk-section-text"> Effective solutions for maintaining wellness and preventing diabetes. </p>
                             </div>
                         </div>
                     </div>
@@ -182,7 +173,7 @@
                                             It hosts workshops, screenings, and advocacy campaigns, collaborating with healthcare providers to improve diabetes care and reduce complications.
                                         </p>
                                         <div class="pt-5 pt-lg-40" data-aos="fade-up" data-aos-delay="100">
-                                            <a href="https://idf.org/our-network/regions-and-members/africa/members/nigeria/diabetes-association-of-nigeria/" class="btn btn-white text-primary fw-semibold">CONTACT US</a>
+                                            <a href="https://idf.org/our-network/regions-and-members/africa/members/nigeria/diabetes-association-of-nigeria/" class="btn btn-white text-primary fw-semibold">GET HELP</a>
                                         </div>
                                     </div>
                                 </div>
@@ -211,7 +202,7 @@
                                     <div class="nk-footer-brand-info">
                                         <div class="nk-footer-logo mb-5 mb-md-0 text-white">
                                             &copy; <span id="currentYear"> </span>
-                                    All Rights Reserved.
+                                            All Rights Reserved.
                                         </div>
                                     </div>
                                 </div>
@@ -222,11 +213,8 @@
             </div>
         </footer>
     </div>
-    <!-- <script src="assets/js/bundle2888.js?v1.0.0"></script>
-    <script src="assets/js/scripts2888.js?v1.0.0"></script> -->
+
     <script type="text/javascript" src="{{ url_for('static', filename='js/bundle.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='js/scripts.js') }}"></script>
-
-
 </body>
 </html>

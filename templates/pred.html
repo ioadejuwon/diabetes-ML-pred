@@ -5,17 +5,18 @@
     <meta name="author" content="Softnio">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/favicon.png">
-    <title>Diabetes Prediction Form</title>
+    <title>Diabetes Prediction Using Machine Learning</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
-
-
+    
     <meta name="author" content="Diabetes Prediction">
-	<meta name="description" content="Using machine learning algorithms to predict diabetes. Model used include Logistic Regression, XGBoost, KNN and SVM." />
-
-	<meta property="og:title" content="Diabetes Prediction using Machine Learning" />
-	<meta property="og:description" content="Using machine learning algorithms to predict diabetes. Model used include Logistic Regression, XGBoost, KNN and SVM." />
-  <meta property="og:image" content="{{ url_for('static', filename='img/diabetes_patient.jpg') }}" />
-  <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/diabetes_patient.jpg') }}">
+    <meta name="description" content="Using machine learning algorithms to predict diabetes. Model used include Logistic Regression, XGBoost, KNN and SVM." />
+    
+    <meta property="og:title" content="Diabetes Prediction using Machine Learning" />
+    <meta property="og:description" content="Using machine learning algorithms to predict diabetes. Model used include Logistic Regression, XGBoost, KNN and SVM." />
+    <meta property="og:image" content="{{ url_for('static', filename='img/diabetes_patient.jpg') }}" />
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/diabetes_patient.jpg') }}">
+    
+    
 </head>
 <body class="nk-body" data-navbar-collapse="xl">
     
@@ -29,9 +30,9 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-8 col-xxl-6">
                             <div class="nk-section-head text-center">
-                                <span class="nk-section-subtitle">Contact support</span>
-                                <h2 class="nk-section-title">Diabetes Prediction Form</h2>
-                                <p class="nk-section-text">Please, fill the form below.</p>
+                                <span class="nk-section-subtitle">TAKE THE TEST</span>
+                                <h2 class="nk-section-title">Diabetes Risk Form</h2>
+                                <p class="nk-section-text">Fill out this quick form to see where you stand with diabetes risk.</p>
                             </div>
                         </div>
                     </div>
@@ -94,14 +95,14 @@
                                                     </select>
                                                 </div>
                                             </div>
-
+                                            
                                             <div class="col-lg-6 pt-4">
                                                 <div class="form-group">
                                                     <label class="form-label">Body Mass Index (BMI)</label>
                                                     <input class="form-control"  type="number" id="bmi" name="bmi" step="0.01" placeholder="Please, enter your BMI.">
                                                 </div>
                                             </div>
-
+                                            
                                             <div class="col-lg-6 pt-4">
                                                 <div class="form-group">
                                                     <label class="form-label">Hemoglobin A1c Level</label>
@@ -109,7 +110,7 @@
                                                 </div>
                                             </div>
                                             
-
+                                            
                                             <div class="col-lg-6 pt-4">
                                                 <div class="form-group">
                                                     <label class="form-label">Blood Glucose Level</label>
@@ -117,12 +118,12 @@
                                                 </div>
                                             </div>
                                             
-                                           
-                                            <div class="col-12 pt-3">
+                                            
+                                            <div class="col-12 pt-5">
                                                 <div class="form-group">
-                                                    <a href="{{ url_for('index') }}" class="btn btn-primary" type="submit" id="submit-btn">Go Back</a>
-                                                    <input class="btn btn-primary" type="submit" value="Predict Status" style="background-color: rgb(15, 86, 86) !important;">
-
+                                                    <a href="{{ url_for('index') }}" class="btn btn-outline-primary p-3" type="submit" id="submit-btn">Go Back</a>
+                                                    <input class="btn btn-primary p-3" type="submit" value="Predict Status" style="margin-left: 20px; background-color: rgb(15, 86, 86) !important;">
+                                                    
                                                 </div>
                                             </div>
                                         </div>
