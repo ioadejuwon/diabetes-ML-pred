@@ -1,6 +1,4 @@
-# diabates-ML-project
-
-🩺 Diabetes Prediction using Machine Learning
+#🩺 Diabetes Prediction using Machine Learning (diabates-ML-project)
 This project aims to predict the likelihood of diabetes in patients using machine learning models, based on medical history and health-related metrics. It was developed as part of my undergraduate research at Redeemer's University and has since been improved upon as I’ve continued to grow in the field of data science.
 
 🔍 Problem Statement
@@ -8,82 +6,43 @@ Diabetes is a major public health concern worldwide. Early prediction can help i
 
 📊 Dataset
 The dataset was sourced from Kaggle and contains anonymized patient records with the following attributes:
-
-gender
-
-age
-
-hypertension
-
-heart_disease
-
-smoking_history
-
-bmi
-
-HbA1c_level
-
-blood_glucose_level
-
-diabetes (target)
+- gender
+- age
+- hypertension
+- heart_disease
+- smoking_history
+- bmi
+- HbA1c_level
+- blood_glucose_level
+- diabetes (target)
 
 🧠 Models Used
 Four classification algorithms were used and compared:
-
-Logistic Regression
-
-K-Nearest Neighbors (KNN)
-
-Support Vector Machine (SVM)
-
-XGBoost
+= Logistic Regression
+= K-Nearest Neighbors (KNN)
+= Support Vector Machine (SVM)
+- XGBoost
 
 Each model was trained and evaluated to determine performance on accuracy, precision, recall, F1-score, and AUC-ROC.
 
-⚙️ Project Structure
-bash
-Copy
-Edit
-📁 diabetes-ML-pred/
-│
-├── 📁 data/                  # Dataset file (CSV)
-├── 📁 models/                # Saved model files (if any)
-├── 📁 visuals/               # Graphs and result plots
-├── 📄 diabetes_prediction.ipynb   # Main notebook
-├── 📄 requirements.txt       # Python dependencies
-└── 📄 README.md              # Project documentation
 📈 Results & Insights
 XGBoost outperformed other models in most metrics, demonstrating its suitability for structured healthcare data.
-
 Visualizations helped identify correlations and feature importance.
-
 Preprocessing techniques (encoding, normalization) were crucial in improving model performance.
 
 🛠️ Tools & Technologies
-Python
-
-Pandas, NumPy
-
-Scikit-learn
-
-XGBoost
-
-Matplotlib, Seaborn
-
-Jupyter Notebook
+- Python
+- Pandas, NumPy
+- Scikit-learn
+- XGBoost
+- Matplotlib, Seaborn
+- Jupyter Notebook
 
 📚 What I Learned
-How to evaluate and compare machine learning models rigorously
-
-Dealing with imbalanced datasets and categorical variables
-
-Communicating insights with visualizations
-
-Applying ML to real-world healthcare problems
-
-🔗 View the Project
-Explore the full notebook and code on GitHub:
-👉 Diabetes Prediction Project
+- How to evaluate and compare machine learning models rigorously
+- Dealing with imbalanced datasets and categorical variables
+- Communicating insights with visualizations
+- Applying ML to real-world healthcare problems
 
 🧑‍💻 Author
 Oluwasegun Isaac Adejuwon
