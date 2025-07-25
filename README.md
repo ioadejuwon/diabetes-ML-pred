@@ -17,10 +17,10 @@ The dataset was sourced from Kaggle and contains anonymized patient records with
 - diabetes (target)
 
 ## 🧠 Models Used
-**Four classification algorithms were used and compared:**
-= Logistic Regression
-= K-Nearest Neighbors (KNN)
-= Support Vector Machine (SVM)
+Four classification algorithms were used and compared:
+- Logistic Regression
+- K-Nearest Neighbors (KNN)
+- Support Vector Machine (SVM)
 - XGBoost
 
 Each model was trained and evaluated to determine performance on accuracy, precision, recall, F1-score, and AUC-ROC.
