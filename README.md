@@ -18,6 +18,7 @@ The dataset was sourced from Kaggle and contains anonymized patient records with
 
 ## 🧠 Models Used
 Four classification algorithms were used and compared:
+    **This text will be bold.**
 - Logistic Regression
 - K-Nearest Neighbors (KNN)
 - Support Vector Machine (SVM)
