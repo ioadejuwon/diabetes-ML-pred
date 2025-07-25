@@ -16,8 +16,8 @@ The dataset was sourced from Kaggle and contains anonymized patient records with
 - blood_glucose_level
 - diabetes (target)
 
-🧠 Models Used
-Four classification algorithms were used and compared:
+## 🧠 Models Used
+**Four classification algorithms were used and compared:**
 = Logistic Regression
 = K-Nearest Neighbors (KNN)
 = Support Vector Machine (SVM)
@@ -25,12 +25,12 @@ Four classification algorithms were used and compared:
 
 Each model was trained and evaluated to determine performance on accuracy, precision, recall, F1-score, and AUC-ROC.
 
-📈 Results & Insights
+## 📈 Results & Insights
 XGBoost outperformed other models in most metrics, demonstrating its suitability for structured healthcare data.
 Visualizations helped identify correlations and feature importance.
 Preprocessing techniques (encoding, normalization) were crucial in improving model performance.
 
-🛠️ Tools & Technologies
+## 🛠️ Tools & Technologies
 - Python
 - Pandas, NumPy
 - Scikit-learn
@@ -38,14 +38,14 @@ Preprocessing techniques (encoding, normalization) were crucial in improving mod
 - Matplotlib, Seaborn
 - Jupyter Notebook
 
-📚 What I Learned
+## 📚 What I Learned
 - How to evaluate and compare machine learning models rigorously
 - Dealing with imbalanced datasets and categorical variables
 - Communicating insights with visualizations
 - Applying ML to real-world healthcare problems
 
-🧑‍💻 Author
-Oluwasegun Isaac Adejuwon
+## 🧑‍💻 Author
+** Oluwasegun Isaac Adejuwon **
 Aspiring Data Scientist | Passionate about healthcare analytics & impactful machine learning
 
 Feel free to connect with me on LinkedIn or explore other projects on my GitHub.
