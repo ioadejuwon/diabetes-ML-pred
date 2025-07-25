@@ -4,7 +4,7 @@ This project aims to predict the likelihood of diabetes in patients using machin
 🔍 Problem Statement
 Diabetes is a major public health concern worldwide. Early prediction can help in taking preventive steps and managing the disease more effectively. This project explores various supervised learning models to build a reliable classifier that predicts whether a patient is diabetic based on features like age, gender, BMI, blood glucose level, HbA1c, hypertension, and smoking history.
 
-📊 Dataset
+#📊 Dataset
 The dataset was sourced from Kaggle and contains anonymized patient records with the following attributes:
 - gender
 - age
