@@ -45,7 +45,7 @@ Preprocessing techniques (encoding, normalization) were crucial in improving mod
 - Applying ML to real-world healthcare problems
 
 ## 🧑‍💻 Author
-**Oluwasegun Isaac Adejuwon**
+**Oluwasegun Isaac Adejuwon** <br>
 Aspiring Data Scientist | Passionate about healthcare analytics & impactful machine learning
 
 Feel free to connect with me on LinkedIn or explore other projects on my GitHub.
