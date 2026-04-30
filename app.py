@@ -8,14 +8,17 @@ import numpy as np
 try:
     with open("best_model.pkl", "rb") as f:
         model = pickle.load(f)
+    # Load scaler
+    with open("scaler.pkl", "rb") as f:
+        scaler = pickle.load(f)
+# except Exception as e:
+#     st.write("Error loading model:")
+#     st.write(e)
 except Exception as e:
-    st.write("Error loading model:")
-    st.write(e)
-    
+    st.error(f"Model loading error: {e}")
+    st.stop()
 
-# Load scaler
-with open("scaler.pkl", "rb") as f:
-    scaler = pickle.load(f)
+
 
 st.title("Diabetes Prediction App")
 st.write("Enter patient details below to predict diabetes status.")
