@@ -1,5 +1,2 @@
-app.py
-requirements.txt
-runtime.txt
-best_model.pkl
-scaler.pkl
+python-3.11
+
