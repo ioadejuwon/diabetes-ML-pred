@@ -1,69 +1,84 @@
-from flask import Flask, render_template, request
+import streamlit as st
 import pickle
 import numpy as np
-from sklearn.preprocessing import StandardScaler
 
-app = Flask(__name__)
+# Load model
+# with open("best_model.pkl", "rb") as f:
+#     model = pickle.load(f)
+try:
+    with open("best_model.pkl", "rb") as f:
+        model = pickle.load(f)
+except Exception as e:
+    st.write("Error loading model:")
+    st.write(e)
+    
 
-# Load the best model
-with open('best_model.pkl', 'rb') as f:
-    model = pickle.load(f)
-
-# Load the scaler
-with open('scaler.pkl', 'rb') as f:
+# Load scaler
+with open("scaler.pkl", "rb") as f:
     scaler = pickle.load(f)
 
-# Get the feature names from the scaler
-feature_names = scaler.get_feature_names_out()
-# print ("Feature Names: "+feature_names)
+st.title("Diabetes Prediction App")
+st.write("Enter patient details below to predict diabetes status.")
 
-# Define the expected input features (excluding the target variable)
-input_features = ['gender', 'age', 'hypertension', 'smoking_history', 'bmi', 'HbA1c_level', 'blood_glucose_level']
+# User-friendly labels mapped to model values
+gender_options = {
+    "Female": 0,
+    "Male": 1
+}
 
-@app.route('/')
-def index():
-    return render_template('index.html')
+hypertension_options = {
+    "No": 0,
+    "Yes": 1
+}
 
+heart_disease_options = {
+    "No": 0,
+    "Yes": 1
+}
 
-@app.route('/pred')
-def predict_diabetes():
-    return render_template('pred.html')
+smoking_history_options = {
+    "Never": 0,
+    "Currently Smoking": 1,
+    "Ever": 1,
+    "Not Currently Smoking": 1,
+    "Former": 1,
+    "No Info": -1
+}
 
-# @app.route('/result')
-# def result():
-#     return render_template('result.html')
+# Form inputs
+gender_label = st.selectbox("Gender", list(gender_options.keys()))
+age = st.number_input("Age", min_value=1, max_value=120, value=25)
+hypertension_label = st.selectbox("History of Hypertension", list(hypertension_options.keys()))
+# heart_disease_label = st.selectbox("History of Heart Disease", list(heart_disease_options.keys()))
+smoking_history_label = st.selectbox("Smoking History", list(smoking_history_options.keys()))
+bmi = st.number_input("Body Mass Index (BMI)", min_value=0.0, value=20.0, step=0.01)
+HbA1c_level = st.number_input("Hemoglobin A1c Level", min_value=0.0, value=5.0, step=0.01)
+blood_glucose_level = st.number_input("Blood Glucose Level", min_value=0.0, value=100.0, step=0.01)
 
+if st.button("Predict"):
+    gender = gender_options[gender_label]
+    hypertension = hypertension_options[hypertension_label]
+    # heart_disease = heart_disease_options[heart_disease_label]
+    smoking_history = smoking_history_options[smoking_history_label]
 
-@app.route('/predict', methods=['POST'])
-def predict():
-    # Get the input values from the form
-    gender = int(request.form['gender'])
-    age = int(request.form['age'])
-    hypertension = int(request.form['hypertension'])
-    # heart_disease = float(request.form['heart_disease'])
-    smoking_history = int(request.form['smoking_history'])
-    bmi = float(request.form['bmi'])
-    HbA1c_level = float(request.form['HbA1c_level'])
-    blood_glucose_level = int(request.form['blood_glucose_level'])
+    input_data = np.array([[
+        gender,
+        age,
+        hypertension,
+        # heart_disease,
+        smoking_history,
+        bmi,
+        HbA1c_level,
+        blood_glucose_level
+    ]])
 
-
-    # Standardize the input data
-    input_data = np.array([[gender, age, hypertension, smoking_history, bmi, HbA1c_level, blood_glucose_level]])
     input_data_scaled = scaler.transform(input_data)
+    prediction = model.predict(input_data_scaled)[0]
 
-    # Make prediction
-    prediction = model.predict(input_data_scaled)
-
-    # Map prediction outcome to human-readable labels
     if prediction == 0:
-        prediction_label = 'No diabetes'
-    # elif prediction == 1:
-    #     prediction_label = 'Diabetes'
+        prediction_label = "No diabetes"
     else:
-        prediction_label = 'Diabetes'
+        prediction_label = "Diabetes"
 
-    # Render the result template with the prediction
-    return render_template('result.html', prediction=prediction_label)
-
-if __name__ == '__main__':
-    app.run(debug=True)
+    st.subheader("Result")
+    st.success(prediction_label)
